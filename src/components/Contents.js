@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
-import backsrc from '../asset/stacks/react.png';
 
 const ContentsBlock = styled.div`
   width: 80%;
@@ -45,7 +44,9 @@ const ContentsBlock = styled.div`
     width: 60px;
   }
   .stacks {
+    width: 600px;
     display: flex;
+    flex-wrap: wrap;
     margin-top: 20px;
     margin-left: 10px;
   }
@@ -55,8 +56,9 @@ const ContentsBlock = styled.div`
     font-size: 0;
     height: 80px;
     margin-right: 10px;
+    margin-bottom: 10px;
     width: 80px;
-    background: url(${backsrc}) no-repeat center/ cover;
+    background-size: cover;
   }
 `;
 
@@ -74,7 +76,9 @@ function Contents() {
 
   useEffect(() => {
     for (var i = 0; i < stacks.current.children.length; i++) {
-      console.log(stacks.current.children[i].innerHTML);
+      stacks.current.children[
+        i
+      ].style.backgroundImage = `url(https://github.com/lsh58/react_portfolio/blob/master/src/asset/stacks/${stacks.current.children[i].innerHTML}.png?raw=true)`;
     }
   }, []);
 
@@ -111,11 +115,17 @@ function Contents() {
           있습니다.
         </p>
         <div className="stacks" ref={stacks}>
-          <span>React</span>
-          <span>Javascript</span>
-          <span>ES6</span>
-          <span>Styled-Components</span>
-          <span>Sass</span>
+          <span>react</span>
+          <span>js</span>
+          <span>es6</span>
+          <span>styled-components</span>
+          <span>sass</span>
+          <span>restfulapi</span>
+          <span>html</span>
+          <span>css</span>
+          <span>ajax</span>
+          <span>jquery</span>
+          <span>php</span>
         </div>
       </section>
     </ContentsBlock>

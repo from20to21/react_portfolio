@@ -22,7 +22,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage": "https://lsh58.github.io/react__portfolio",
+  "homepage": "https://lsh58.github.io/react_portfolio",
   "browserslist": {
     "production": [
       ">0.2%",

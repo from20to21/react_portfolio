@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 
-const ContentsBlock = styled.div`
+const AboutBlock = styled.div`
   width: 80%;
   section {
     margin-left: 50px;
@@ -50,19 +50,34 @@ const ContentsBlock = styled.div`
     margin-top: 20px;
     margin-left: 10px;
   }
-  .stacks span {
+  .stacks > span {
+    background-size: cover;
     border: 2px solid #212529;
     border-radius: 5px;
     font-size: 0;
     height: 80px;
     margin-right: 10px;
     margin-bottom: 10px;
+    position: relative;
     width: 80px;
-    background-size: cover;
+  }
+  .stacks .last {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .stacks .last span {
+    margin-right: 5px;
+    width: 7px;
+    height: 7px;
+    background: #212529;
+    border-radius: 100%;
   }
 `;
 
-function Contents() {
+function About() {
   const copied = useRef(null);
   const stacks = useRef(null);
 
@@ -83,7 +98,7 @@ function Contents() {
   }, []);
 
   return (
-    <ContentsBlock>
+    <AboutBlock>
       <section>
         <h2>안녕하세요</h2>
         <p>
@@ -126,10 +141,15 @@ function Contents() {
           <span>ajax</span>
           <span>jquery</span>
           <span>php</span>
+          <div className="last">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </section>
-    </ContentsBlock>
+    </AboutBlock>
   );
 }
 
-export default Contents;
+export default About;

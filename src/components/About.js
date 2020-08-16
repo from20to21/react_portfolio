@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const AboutBlock = styled.div`
   width: 80%;
+  margin-left: 300px;
   section {
     margin-left: 50px;
     margin-top: 50px;

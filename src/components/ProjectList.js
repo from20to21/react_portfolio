@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-function ProjectList({ date, title, link, desc, onClick }) {
+function ProjectList({ date, title, link, desc, desc2, onClick }) {
   return (
     <li>
       <p className="date">{date}</p>
@@ -12,6 +12,7 @@ function ProjectList({ date, title, link, desc, onClick }) {
         </NavLink>
       </div>
       <p className="descript">{desc}</p>
+      <p className="descript2">{desc2}</p>
     </li>
   );
 }

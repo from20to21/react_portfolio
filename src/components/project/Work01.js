@@ -2,13 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaRegHandPointLeft } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
+import ImageGallery from 'react-image-gallery';
 
 const Work01Block = styled.div`
   width: 100%;
   background: #fff;
   margin-left: 300px;
   margin-top: 50px;
-
   .back {
     margin-left: 50px;
     font-weight: 600;
@@ -37,7 +37,32 @@ const Work01Block = styled.div`
     line-height: 1.5rem;
     letter-spacing: 0.05rem;
   }
+  .image-gallery {
+    margin-top: 20px;
+    width: 50%;
+    margin-left: 50px;
+  }
+  .image-gallery-play-button {
+    display: none;
+  }
+  .image-gallery-svg {
+    width: 25px;
+  }
 `;
+const images = [
+  {
+    original:
+      'https://github.com/lsh58/react_portfolio/blob/master/src/asset/image/react01.png?raw=true',
+    thumbnail:
+      'https://github.com/lsh58/react_portfolio/blob/master/src/asset/thum/react01thum.png?raw=true',
+  },
+  {
+    original:
+      'https://github.com/lsh58/react_portfolio/blob/master/src/asset/image/react02.png?raw=true',
+    thumbnail:
+      'https://github.com/lsh58/react_portfolio/blob/master/src/asset/thum/react02thum.png?raw=true',
+  },
+];
 
 function Work01() {
   return (
@@ -53,6 +78,11 @@ function Work01() {
         <br />
         ver2에서는 context api를 활용하여 데이터를 전달하도록 하였습니다.
       </p>
+      <ImageGallery
+        items={images}
+        autoPlay={true}
+        thumbnailPosition={'right'}
+      />
     </Work01Block>
   );
 }

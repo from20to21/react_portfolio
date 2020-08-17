@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaRegHandPointLeft } from 'react-icons/fa';
+import { FaAngleLeft } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import ImageGallery from 'react-image-gallery';
 
@@ -13,13 +13,14 @@ const Work01Block = styled.div`
     margin-left: 50px;
     font-weight: 600;
     display: flex;
+    align-items: center;
     letter-spacing: 0.05rem;
   }
   .backicon {
-    margin-right: 5px;
+    font-size: 1.4rem;
   }
   .date {
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: 60px;
     letter-spacing: 0.05rem;
   }
@@ -31,10 +32,25 @@ const Work01Block = styled.div`
     margin-left: 50px;
     letter-spacing: 0.05rem;
   }
+  h3 a {
+    background: #212529;
+    color: #fff;
+    margin-left: 7px;
+    padding: 4px 7px;
+    border-radius: 5px;
+    letter-spacing: 0.03rem;
+    font-size: 0.8rem;
+    font-weight: 100;
+    cursor: pointer;
+  }
+  h3 a:first-child {
+    margin-left: 15px;
+  }
   .descript {
+    font-size: 0.9rem;
     margin-left: 50px;
     margin-top: 20px;
-    line-height: 1.5rem;
+    line-height: 1.7rem;
     letter-spacing: 0.05rem;
   }
   .image-gallery {
@@ -52,12 +68,6 @@ const Work01Block = styled.div`
 const images = [
   {
     original:
-      'https://github.com/lsh58/react_portfolio/blob/master/src/asset/image/react01.png?raw=true',
-    thumbnail:
-      'https://github.com/lsh58/react_portfolio/blob/master/src/asset/thum/react01thum.png?raw=true',
-  },
-  {
-    original:
       'https://github.com/lsh58/react_portfolio/blob/master/src/asset/image/react02.png?raw=true',
     thumbnail:
       'https://github.com/lsh58/react_portfolio/blob/master/src/asset/thum/react02thum.png?raw=true',
@@ -68,21 +78,28 @@ function Work01() {
   return (
     <Work01Block>
       <NavLink className="back" to="/Project">
-        <FaRegHandPointLeft className="backicon" />
+        <FaAngleLeft className="backicon" />
         돌아가기
       </NavLink>
       <p className="date">2020.07-2020.08</p>
-      <h3>Todo List ver1,2 제작</h3>
+      <h3>
+        Todo List ver2 제작
+        <a href="http://lsh58.github.io/react_todo2" target="_blank">
+          웹페이지 바로가기
+        </a>
+        <a href="https://github.com/lsh58/react_todo2" target="_blank">
+          GitHub 바로가기
+        </a>
+      </h3>
+      <ImageGallery items={images} thumbnailPosition={'right'} />
       <p className="descript">
-        React Hooks를 사용하여 todolist를 제작하였습니다.
-        <br />
-        ver2에서는 context api를 활용하여 데이터를 전달하도록 하였습니다.
+        - 개발언어 : React / Javascript / Styled-components
+        <br />- Hooks를 활용한 기능구현 (useState, useRef, useReducer,
+        useContext, customHooks)
+        <br />- Context api를 활용한 데이터 전달 구현
+        <br />- 매일 날짜 업데이트, 남은 할일 카운트, 전체목록/남은목록/완료목록
+        구분해서 나오도록 구현
       </p>
-      <ImageGallery
-        items={images}
-        autoPlay={true}
-        thumbnailPosition={'right'}
-      />
     </Work01Block>
   );
 }

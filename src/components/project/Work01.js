@@ -68,9 +68,21 @@ const Work01Block = styled.div`
 const images = [
   {
     original:
-      'https://github.com/lsh58/react_portfolio/blob/master/src/asset/image/react02.png?raw=true',
+      'https://github.com/lsh58/react_portfolio/blob/master/src/asset/image/react02_01.png?raw=true',
     thumbnail:
-      'https://github.com/lsh58/react_portfolio/blob/master/src/asset/thum/react02thum.png?raw=true',
+      'https://github.com/lsh58/react_portfolio/blob/master/src/asset/thum/react02thum_01.png?raw=true',
+  },
+  {
+    original:
+      'https://github.com/lsh58/react_portfolio/blob/master/src/asset/image/react02_02.png?raw=true',
+    thumbnail:
+      'https://github.com/lsh58/react_portfolio/blob/master/src/asset/thum/react02thum_02.png?raw=true',
+  },
+  {
+    original:
+      'https://github.com/lsh58/react_portfolio/blob/master/src/asset/image/react02_03.png?raw=true',
+    thumbnail:
+      'https://github.com/lsh58/react_portfolio/blob/master/src/asset/thum/react02thum_03.png?raw=true',
   },
 ];
 

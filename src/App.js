@@ -121,8 +121,8 @@ function App() {
         </LeftTabBlock>
         <Switch>
           <Route path="/react_portfolio" component={About} exact />
-          <Route path="/project" component={Project} exact />
-          <Route path="/contact" component={Contact} />
+          <Route path="/Project" component={Project} exact />
+          <Route path="/Contact" component={Contact} />
           <Route path="/Project/work01" component={Work01} />
           <Route path="/Project/work02" component={Work02} />
           <Route path="/Project/work03" component={Work03} />

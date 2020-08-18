@@ -131,10 +131,11 @@ function Work05() {
       </h3>
       <ImageGallery items={images} thumbnailPosition={'right'} />
       <p className="descript">
-        - 개발언어 : Html / css / jQuery / JavaScript
-        <br />- 로딩화면 구현
-        <br />- Parallax 기능 구현
-        <br />- Json을 이용한 데이터 전환 구현 ( 탭에 따른 내용 전환기능)
+        - 개발언어 : Html / css / JavaScript
+        <br />- 반응형 (PC/Tablet/Mobile) 구현
+        <br />- Json을 이용한 데이터 불러오기 구현
+        <br />- 그누보드를 활용한 게시판 구현
+        <br />- 갤러리 기능 구현
       </p>
     </Work05Block>
   );

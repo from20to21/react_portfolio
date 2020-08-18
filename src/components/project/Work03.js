@@ -93,18 +93,18 @@ function Work03() {
         <FaAngleLeft className="backicon" />
         돌아가기
       </NavLink>
-      <p className="date">2020.07-2020.08</p>
+      <p className="date">2020.06-2020.07</p>
       <h3>
         Wavve Clone Page
         <a
-          href="https://lsh58.github.io/todo_list/"
+          href="https://lsh58.github.io/react_wavve/"
           target="_blank"
           rel="noopener noreferrer"
         >
           웹페이지 바로가기
         </a>
         <a
-          href="https://github.com/lsh58/todo_list/"
+          href="https://github.com/lsh58/react_wavve/"
           target="_blank"
           rel="noopener noreferrer"
         >

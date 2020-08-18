@@ -96,10 +96,18 @@ function Work01() {
       <p className="date">2020.07-2020.08</p>
       <h3>
         Todo List ver2 제작
-        <a href="http://lsh58.github.io/react_todo2" target="_blank">
+        <a
+          href="http://lsh58.github.io/react_todo2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           웹페이지 바로가기
         </a>
-        <a href="https://github.com/lsh58/react_todo2" target="_blank">
+        <a
+          href="https://github.com/lsh58/react_todo2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           GitHub 바로가기
         </a>
       </h3>

@@ -83,16 +83,16 @@ function Work02() {
       </NavLink>
       <p className="date">2020.07-2020.08</p>
       <h3>
-        Todo List ver2 제작
+        Todo List ver1
         <a
-          href="http://lsh58.github.io/react_todo2"
+          href="https://lsh58.github.io/todo_list/"
           target="_blank"
           rel="noopener noreferrer"
         >
           웹페이지 바로가기
         </a>
         <a
-          href="https://github.com/lsh58/react_todo2"
+          href="https://github.com/lsh58/todo_list/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -102,11 +102,8 @@ function Work02() {
       <ImageGallery items={images} thumbnailPosition={'right'} />
       <p className="descript">
         - 개발언어 : React / Javascript / Styled-components
-        <br />- Hooks를 활용한 기능구현 (useState, useRef, useReducer,
-        useContext, customHooks)
-        <br />- Context api를 활용한 데이터 전달 구현
-        <br />- 매일 날짜 업데이트, 남은 할일 카운트, 전체목록/남은목록/완료목록
-        구분해서 나오도록 구현
+        <br />- Hooks를 활용한 기능구현 (useState, useRef)
+        <br />- 반응형으로 동작하도록 Styled-components 적용
       </p>
     </Work02Block>
   );

@@ -95,7 +95,7 @@ function Work01() {
       </NavLink>
       <p className="date">2020.07-2020.08</p>
       <h3>
-        Todo List ver2 제작
+        Todo List ver2
         <a
           href="http://lsh58.github.io/react_todo2"
           target="_blank"

@@ -131,7 +131,7 @@ function Work05() {
       </h3>
       <ImageGallery items={images} thumbnailPosition={'right'} />
       <p className="descript">
-        - 개발언어 : Html / Scss / jQuery / JavaScript
+        - 개발언어 : Html / css / jQuery / JavaScript
         <br />- 로딩화면 구현
         <br />- Parallax 기능 구현
         <br />- Json을 이용한 데이터 전환 구현 ( 탭에 따른 내용 전환기능)

@@ -84,6 +84,12 @@ const images = [
     thumbnail:
       'https://github.com/lsh58/react_portfolio/blob/master/src/asset/thum/zarathum_03.png?raw=true',
   },
+  {
+    original:
+      'https://github.com/lsh58/react_portfolio/blob/master/src/asset/image/zara04.png?raw=true',
+    thumbnail:
+      'https://github.com/lsh58/react_portfolio/blob/master/src/asset/thum/zarathum_04.png?raw=true',
+  },
 ];
 
 function Work04() {

@@ -14,6 +14,7 @@ import Work02 from './components/Project/Work02';
 import Work03 from './components/Project/Work03';
 import Work04 from './components/Project/Work04';
 import Work05 from './components/Project/Work05';
+import Work06 from './components/Project/Work06';
 import './App.css';
 
 const PageTemplate = styled.div`
@@ -127,6 +128,7 @@ function App() {
           <Route path="/Project/work03" component={Work03} />
           <Route path="/Project/work04" component={Work04} />
           <Route path="/Project/work05" component={Work05} />
+          <Route path="/Project/work06" component={Work06} />
         </Switch>
       </Router>
     </PageTemplate>

@@ -72,6 +72,18 @@ const images = [
     thumbnail:
       'https://github.com/lsh58/react_portfolio/blob/master/src/asset/thum/wavvethum_01.png?raw=true',
   },
+  {
+    original:
+      'https://github.com/lsh58/react_portfolio/blob/master/src/asset/image/wavve02.png?raw=true',
+    thumbnail:
+      'https://github.com/lsh58/react_portfolio/blob/master/src/asset/thum/wavvethum_02.png?raw=true',
+  },
+  {
+    original:
+      'https://github.com/lsh58/react_portfolio/blob/master/src/asset/image/wavve03.png?raw=true',
+    thumbnail:
+      'https://github.com/lsh58/react_portfolio/blob/master/src/asset/thum/wavvethum_03.png?raw=true',
+  },
 ];
 
 function Work03() {

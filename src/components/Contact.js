@@ -49,7 +49,7 @@ function Contact() {
             <strong>전화번호</strong>010.4140.1263
           </li>
           <li>
-            <strong>이메일</strong>tmdgusdl58@gmail.com
+            <strong>이메일</strong>tmdgusdl58@gmail.com<span>copy</span>
           </li>
           <li>
             <strong>깃허브</strong>

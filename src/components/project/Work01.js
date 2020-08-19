@@ -10,6 +10,7 @@ const customMedia = generateMedia({
   mdDesktop: '1150px',
   tablet: '960px',
   smTablet: '740px',
+  phone: '480px',
 });
 
 const Work01Block = styled.div`
@@ -80,7 +81,32 @@ const Work01Block = styled.div`
     width: 80%;
   }
   `};
+  ${customMedia.lessThan('phone')`
+    margin-top:80px;
+    .back {
+      margin-left: 30px;
+    }
+    .date {
+    margin-left: 30px;
+    }
+    h3 {
+      margin-left: 30px;
+      display:flex;
+      flex-direction:column;
+    }
+  h3 a:first-child {
+    margin-left: 5px;
+  }
+  .descript {
+    margin-left: 30px;
+  }
+  .image-gallery {
+    width: 90%;
+    margin-left: 30px;
+  }
+  `};
 `;
+
 const images = [
   {
     original:
@@ -112,20 +138,22 @@ function Work01() {
       <p className="date">2020.07-2020.08</p>
       <h3>
         Todo List ver2
-        <a
-          href="http://lsh58.github.io/react_todo2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          웹페이지 바로가기
-        </a>
-        <a
-          href="https://github.com/lsh58/react_todo2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub 바로가기
-        </a>
+        <div>
+          <a
+            href="http://lsh58.github.io/react_todo2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            웹페이지 바로가기
+          </a>
+          <a
+            href="https://github.com/lsh58/react_todo2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub 바로가기
+          </a>
+        </div>
       </h3>
       <ImageGallery items={images} thumbnailPosition={'right'} />
       <p className="descript">

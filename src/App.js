@@ -23,6 +23,7 @@ const customMedia = generateMedia({
   mdDesktop: '1150px',
   tablet: '960px',
   smTablet: '740px',
+  phone: '480px',
 });
 
 const PageTemplate = styled.div`
@@ -91,6 +92,12 @@ const LeftTabBlock = styled.div`
       display:none;
     }
   `};
+  ${customMedia.lessThan('phone')`
+    height:60px;
+    h1 {
+      display:none;
+    }
+  `};
 `;
 
 const LeftMenuBlock = styled.div`
@@ -134,6 +141,14 @@ const LeftMenuBlock = styled.div`
   ${customMedia.lessThan('tablet')`
   nav a{
       margin-left:50px;
+    }
+  `};
+  ${customMedia.lessThan('phone')`
+    margin-top: 25px;
+    margin-left: 5px;
+    nav a{
+      font-size:14px;
+      margin-left:15%;
     }
   `};
 `;

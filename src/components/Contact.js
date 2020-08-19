@@ -7,6 +7,7 @@ const customMedia = generateMedia({
   mdDesktop: '1150px',
   tablet: '960px',
   smTablet: '740px',
+  phone: '480px',
 });
 
 const ContactBlock = styled.div`
@@ -50,6 +51,15 @@ const ContactBlock = styled.div`
     margin-top: 100px;
   }
   `};
+  ${customMedia.lessThan('phone')`
+    margin-top:40px;
+    .contact__wrapper {
+      margin-left: 30px;
+    }
+    h2 {
+    margin-left: 0px;
+  }
+  `};
 `;
 
 function Contact() {
@@ -66,7 +76,7 @@ function Contact() {
             <strong>전화번호</strong>010.4140.1263
           </li>
           <li>
-            <strong>이메일</strong>tmdgusdl58@gmail.com<span>copy</span>
+            <strong>이메일</strong>tmdgusdl58@gmail.com
           </li>
           <li>
             <strong>깃허브</strong>

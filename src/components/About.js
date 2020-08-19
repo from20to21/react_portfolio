@@ -7,6 +7,7 @@ const customMedia = generateMedia({
   mdDesktop: '1150px',
   tablet: '960px',
   smTablet: '740px',
+  phone: '480px',
 });
 
 const AboutBlock = styled.div`
@@ -89,6 +90,16 @@ const AboutBlock = styled.div`
     width: 90%;
     margin-left: 0px;
     margin-top:70px;
+  `};
+  ${customMedia.lessThan('phone')`
+    margin-top:40px;
+    section {
+      margin-left: 30px;
+      margin-top: 50px;
+    }
+    .stacks {
+      width: 400px;
+    }
   `};
 `;
 

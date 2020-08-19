@@ -10,6 +10,7 @@ const customMedia = generateMedia({
   mdDesktop: '1150px',
   tablet: '960px',
   smTablet: '740px',
+  phone: '480px',
 });
 const Work06Block = styled.div`
   width: 100%;
@@ -77,6 +78,30 @@ const Work06Block = styled.div`
     margin-top:100px;
     .image-gallery {
     width: 80%;
+  }
+  `};
+  ${customMedia.lessThan('phone')`
+    margin-top:80px;
+    .back {
+      margin-left: 30px;
+    }
+    .date {
+    margin-left: 30px;
+    }
+    h3 {
+      margin-left: 30px;
+      display:flex;
+      flex-direction:column;
+    }
+  h3 a:first-child {
+    margin-left: 5px;
+  }
+  .descript {
+    margin-left: 30px;
+  }
+  .image-gallery {
+    width: 90%;
+    margin-left: 30px;
   }
   `};
 `;

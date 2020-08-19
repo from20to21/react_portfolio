@@ -8,6 +8,7 @@ const customMedia = generateMedia({
   mdDesktop: '1150px',
   tablet: '960px',
   smTablet: '740px',
+  phone: '480px',
 });
 
 const ProjectBlock = styled.div`
@@ -61,7 +62,7 @@ const ProjectBlock = styled.div`
     line-height: 1.5rem;
     font-weight: 300;
     letter-spacing: 0.03rem;
-    word-break: nowrap;
+    word-break: keep-all;
   }
   li .descript2 {
     line-height: 1.5rem;
@@ -78,6 +79,25 @@ const ProjectBlock = styled.div`
     }
     li .descript {
       width: 100%;
+    }
+  `};
+  ${customMedia.lessThan('phone')`
+    margin-top:40px;
+    h2 {
+      margin-left: 30px;
+    }
+    ul {
+      margin: 30px 0 50px 30px;
+    }
+    li .title {
+    margin-top: 10px;
+      display: flex;
+      flex-direction:column;
+      align-items: flex-start;
+    }
+    li .title a {
+      margin-top: 10px;
+      margin-left: 0px;
     }
   `};
 `;

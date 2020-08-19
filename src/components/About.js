@@ -1,5 +1,13 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
+import { generateMedia } from 'styled-media-query';
+
+const customMedia = generateMedia({
+  lgDesktop: '1350px',
+  mdDesktop: '1150px',
+  tablet: '960px',
+  smTablet: '740px',
+});
 
 const AboutBlock = styled.div`
   width: 80%;
@@ -23,6 +31,7 @@ const AboutBlock = styled.div`
     line-height: 24px;
     margin-top: 15px;
     margin-left: 10px;
+    word-break: keep-all;
   }
   .email {
     color: #1c7ed6;
@@ -76,6 +85,11 @@ const AboutBlock = styled.div`
     background: #212529;
     border-radius: 100%;
   }
+  ${customMedia.lessThan('mdDesktop')`
+    width: 90%;
+    margin-left: 0px;
+    margin-top:70px;
+  `};
 `;
 
 function About() {

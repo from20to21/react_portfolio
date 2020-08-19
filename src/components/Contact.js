@@ -1,5 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import { generateMedia } from 'styled-media-query';
+
+const customMedia = generateMedia({
+  lgDesktop: '1350px',
+  mdDesktop: '1150px',
+  tablet: '960px',
+  smTablet: '740px',
+});
 
 const ContactBlock = styled.div`
   width: 80%;
@@ -33,6 +41,15 @@ const ContactBlock = styled.div`
     margin-right: 20px;
     letter-spacing: 0.05rem;
   }
+  ${customMedia.lessThan('mdDesktop')`
+    width: 90%;
+    margin-left: 0px;
+    margin-top:70px;
+    .contact__wrapper {
+    margin-left: 70px;
+    margin-top: 100px;
+  }
+  `};
 `;
 
 function Contact() {

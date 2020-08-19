@@ -1,6 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import { generateMedia } from 'styled-media-query';
 import ProjectList from './ProjectList';
+
+const customMedia = generateMedia({
+  lgDesktop: '1350px',
+  mdDesktop: '1150px',
+  tablet: '960px',
+  smTablet: '740px',
+});
 
 const ProjectBlock = styled.div`
   width: 80%;
@@ -61,6 +69,17 @@ const ProjectBlock = styled.div`
     letter-spacing: 0.03rem;
     word-break: nowrap;
   }
+  ${customMedia.lessThan('mdDesktop')`
+    width: 90%;
+    margin-left: 0px;
+    margin-top:70px;
+    ul {
+    margin: 30px 0 50px 80px;
+    }
+    li .descript {
+      width: 100%;
+    }
+  `};
 `;
 
 function Project() {

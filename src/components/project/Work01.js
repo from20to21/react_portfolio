@@ -3,6 +3,14 @@ import styled from 'styled-components';
 import { FaAngleLeft } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import ImageGallery from 'react-image-gallery';
+import { generateMedia } from 'styled-media-query';
+
+const customMedia = generateMedia({
+  lgDesktop: '1350px',
+  mdDesktop: '1150px',
+  tablet: '960px',
+  smTablet: '740px',
+});
 
 const Work01Block = styled.div`
   width: 100%;
@@ -64,6 +72,14 @@ const Work01Block = styled.div`
   .image-gallery-svg {
     width: 25px;
   }
+  ${customMedia.lessThan('mdDesktop')`
+    width: 90%;
+    margin-left: 0px;
+    margin-top:100px;
+    .image-gallery {
+    width: 80%;
+  }
+  `};
 `;
 const images = [
   {

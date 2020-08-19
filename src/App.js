@@ -6,6 +6,7 @@ import {
   NavLink,
 } from 'react-router-dom';
 import styled from 'styled-components';
+import { generateMedia } from 'styled-media-query';
 import About from './components/About';
 import Project from './components/Project';
 import Contact from './components/Contact';
@@ -16,6 +17,13 @@ import Work04 from './components/Project/Work04';
 import Work05 from './components/Project/Work05';
 import Work06 from './components/Project/Work06';
 import './App.css';
+
+const customMedia = generateMedia({
+  lgDesktop: '1350px',
+  mdDesktop: '1150px',
+  tablet: '960px',
+  smTablet: '740px',
+});
 
 const PageTemplate = styled.div`
   width: 100%;
@@ -32,9 +40,13 @@ const LeftTabBlock = styled.div`
   box-shadow: 10px 0px 34px -15px rgba(0, 0, 0, 0.75);
   position: fixed;
   z-index: 100;
+  display: flex;
+  flex-direction: column;
   h1 {
     margin-top: 50px;
     margin-left: 40px;
+  }
+  h1 a {
     color: #ffffff;
     font-size: 14px;
     font-weight: lighter;
@@ -61,14 +73,31 @@ const LeftTabBlock = styled.div`
     margin-bottom: 5px;
     letter-spacing: 0.02rem;
   }
+  ${customMedia.lessThan('mdDesktop')`
+    width:100%;
+    height:70px;
+    flex-direction:row;
+    h1 {
+      margin-top: 15px;
+      min-width: 150px;
+    }
+    h1 a{
+      font-size:12px;
+    }
+    h1 strong{
+      font-size:16px;
+    }
+    .descript {
+      display:none;
+    }
+  `};
 `;
 
 const LeftMenuBlock = styled.div`
   margin-top: 60px;
   margin-left: 40px;
-  display: flex;
-  flex-direction: column;
   position: relative;
+  width: 60%;
   nav {
     display: flex;
     flex-direction: column;
@@ -89,6 +118,24 @@ const LeftMenuBlock = styled.div`
     border-left: 5px solid #fff;
     transition: border-left 0.5s;
   }
+  ${customMedia.lessThan('mdDesktop')`
+    margin-top: 25px;
+    nav {
+      display: flex;
+      flex-direction: row;
+    }
+    nav a{
+      margin-left:100px;
+    }
+    nav a.selected{
+      border:none;
+    }
+  `};
+  ${customMedia.lessThan('tablet')`
+  nav a{
+      margin-left:50px;
+    }
+  `};
 `;
 
 function App() {
@@ -97,9 +144,11 @@ function App() {
       <Router>
         <LeftTabBlock>
           <h1>
-            FRONT-END DEVELOPER
-            <br />
-            <strong>LEE SEUNG HYUN</strong>
+            <NavLink to="/react_portfolio" exact activeClassName="selected">
+              FRONT-END DEVELOPER
+              <br />
+              <strong>LEE SEUNG HYUN</strong>
+            </NavLink>
           </h1>
           <LeftMenuBlock>
             <nav>

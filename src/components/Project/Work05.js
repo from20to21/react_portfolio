@@ -154,20 +154,22 @@ function Work05() {
       <p className="date">2020.04-2020.05</p>
       <h3>
         뷰티풀민트라이프 웹사이트
-        <a
-          href="http://tmdgus508.dothome.co.kr/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          웹페이지 바로가기
-        </a>
-        <a
-          href="https://github.com/lsh58/bml/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub 바로가기
-        </a>
+        <div>
+          <a
+            href="http://tmdgus508.dothome.co.kr/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            웹페이지 바로가기
+          </a>
+          <a
+            href="https://github.com/lsh58/bml/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub 바로가기
+          </a>
+        </div>
       </h3>
       <ImageGallery items={images} thumbnailPosition={'right'} />
       <p className="descript">

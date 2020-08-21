@@ -130,20 +130,22 @@ function Work06() {
       <p className="date">2020.03-2020.04</p>
       <h3>
         한국관광공사 웹사이트
-        <a
-          href="https://lsh58.github.io/project_G/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          웹페이지 바로가기
-        </a>
-        <a
-          href="https://github.com/lsh58/project_G/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub 바로가기
-        </a>
+        <div>
+          <a
+            href="https://lsh58.github.io/project_G/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            웹페이지 바로가기
+          </a>
+          <a
+            href="https://github.com/lsh58/project_G/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub 바로가기
+          </a>
+        </div>
       </h3>
       <ImageGallery items={images} thumbnailPosition={'right'} />
       <p className="descript">

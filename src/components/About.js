@@ -106,11 +106,20 @@ const AboutBlock = styled.div`
 function About() {
   const copied = useRef(null);
   const stacks = useRef(null);
-
+  const copydata = 'tmdgusdl58@gmail.com';
+  function copyToClipboard() {
+    var aux = document.createElement('input');
+    aux.setAttribute('value', copydata);
+    document.body.appendChild(aux);
+    aux.select();
+    document.execCommand('copy');
+    document.body.removeChild(aux);
+  }
   function copyText(e) {
     e.preventDefault();
     copied.current.style = `bottom :-28px; opacity :1`;
     setTimeout(function () {
+      copyToClipboard();
       copied.current.style = `bottom :-15px; opacity :0`;
     }, 500);
   }

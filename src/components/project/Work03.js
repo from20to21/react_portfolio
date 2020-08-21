@@ -136,20 +136,22 @@ function Work03() {
       <p className="date">2020.06-2020.07</p>
       <h3>
         Wavve Clone Page
-        <a
-          href="https://lsh58.github.io/react_wavve/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          웹페이지 바로가기
-        </a>
-        <a
-          href="https://github.com/lsh58/react_wavve/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub 바로가기
-        </a>
+        <div>
+          <a
+            href="https://lsh58.github.io/react_wavve/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            웹페이지 바로가기
+          </a>
+          <a
+            href="https://github.com/lsh58/react_wavve/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub 바로가기
+          </a>
+        </div>
       </h3>
       <ImageGallery items={images} thumbnailPosition={'right'} />
       <p className="descript">

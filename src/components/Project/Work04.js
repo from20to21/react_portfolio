@@ -142,20 +142,22 @@ function Work04() {
       <p className="date">2020.05-2020.06</p>
       <h3>
         ZARA 모바일페이지
-        <a
-          href="https://lsh58.github.io/ZARA/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          웹페이지 바로가기
-        </a>
-        <a
-          href="https://github.com/lsh58/ZARA/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub 바로가기
-        </a>
+        <div>
+          <a
+            href="https://lsh58.github.io/ZARA/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            웹페이지 바로가기
+          </a>
+          <a
+            href="https://github.com/lsh58/ZARA/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub 바로가기
+          </a>
+        </div>
       </h3>
       <ImageGallery items={images} thumbnailPosition={'right'} />
       <p className="descript">
